@@ -1,4 +1,4 @@
-## Zoom-Retranslator
+# Zoom-Retranslator
 
 ## Add API keys to `API_KEYS`
 

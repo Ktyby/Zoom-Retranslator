@@ -23,18 +23,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@zoomus/websdk": "^1.7.10",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.14",
-    "query-string": "^6.13.1",
+    "@zoomus/websdk": "1.7.10",
     "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-redux": "7.1.0",
-    "react-scripts": "3.4.1",
-    "redux": "3.7.2",
-    "redux-thunk": "2.2.0"
+    "react-dom": "16.8.6"
   },
   "scripts": {
     "start": "webpack-dev-server --open --hot",

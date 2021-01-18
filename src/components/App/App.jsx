@@ -8,10 +8,10 @@ let apiKeys = {
 
 let meetConfig = {
   apiKey: apiKeys.apiKey,
-  meetingNumber: '78636220037',
+  meetingNumber: '72953075750',
   userName: 'Example',
   userEmail: 'example@example.com',
-  passWord: '6Xf6XS',
+  passWord: 'BhwK93',
   role: 0,
 };
 

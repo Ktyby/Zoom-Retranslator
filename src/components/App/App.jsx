@@ -1,27 +1,28 @@
 import React, { useEffect } from 'react';
 import { ZoomMtg } from '@zoomus/websdk';
 
-let apiKeys = {
+const LEAVE_URL = 'https://zoom.us/';
+
+const API_KEYS = {
   apiKey: '3aPDaIfpQwO8yAp4buFL0g',
   apiSecret: 'JNsjzDfh0bfhaYSyTbZAuTIAWtULMZezb34i',
 };
 
-let meetConfig = {
-  apiKey: apiKeys.apiKey,
-  meetingNumber: '72953075750',
+const MEET_CONFIG = {
+  apiKey: API_KEYS.apiKey,
+  meetingNumber: '75098855333',
   userName: 'Example',
   userEmail: 'example@example.com',
-  passWord: 'BhwK93',
+  passWord: 'cZ3FJ4',
   role: 0,
 };
 
-function App() {
-  function joinMeeting(signature, meetConfig) {
+const App = () => {
+  const joinMeeting = (signature, meetConfig) => {
     ZoomMtg.init({
-      leaveUrl: 'https://zoom.us/',
+      leaveUrl: LEAVE_URL,
       isSupportAV: true,
-      success: function (success) {
-        console.log('Init Success ', success);
+      success: (success) => {
         ZoomMtg.join({
           meetingNumber: meetConfig.meetingNumber,
           userName: meetConfig.userName,
@@ -46,15 +47,13 @@ function App() {
     ZoomMtg.prepareJssdk();
 
     ZoomMtg.generateSignature({
-      meetingNumber: meetConfig.meetingNumber,
-      apiKey: meetConfig.apiKey,
-      apiSecret: apiKeys.apiSecret,
-      role: meetConfig.role,
-      success: function (res) {
-        console.log('res', res);
-
+      meetingNumber: MEET_CONFIG.meetingNumber,
+      apiKey: API_KEYS.apiKey,
+      apiSecret: API_KEYS.apiSecret,
+      role: MEET_CONFIG.role,
+      success: (res) => {
         setTimeout(() => {
-          joinMeeting(res.result, meetConfig);
+          joinMeeting(res.result, MEET_CONFIG);
         }, 1000);
       },
     });

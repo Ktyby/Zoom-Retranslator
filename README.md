@@ -1,17 +1,21 @@
-## Zoom web sdk implementation
+## Zoom-Retranslator
 
-An example react project with zoom sdk implementation
-
-### Add API keys to `.env`
-
-Add the following keys to `.env` file
+### Add API keys to `API_KEYS`
 
 ```
-REACT_APP_ZOOM_API_KEY=YOUR_ZOOM_API_KEY
-REACT_APP_ZOOM_API_SECRET_KEY=YOUR_ZOOM_SECRET_KEY
+const API_KEYS = {
+  apiKey: 'YOUR_ZOOM_API_KEY',
+  apiSecret: 'YOUR_ZOOM_SECRET_KEY',
+};
+
 ```
+  
+## Development
+1. Clone Repository `git clone https://github.com/Ktyby/Zoom-Retranslator.git`
+2. Install npm `yarn`
+3. Run project `yarn start`
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+  
+## Support
+When you have suggestions, you can open issues on github.

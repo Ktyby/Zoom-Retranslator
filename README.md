@@ -1,6 +1,6 @@
 ## Zoom-Retranslator
 
-### Add API keys to `API_KEYS`
+## Add API keys to `API_KEYS`
 
 ```
 const API_KEYS = {
@@ -8,6 +8,19 @@ const API_KEYS = {
   apiSecret: 'YOUR_ZOOM_SECRET_KEY',
 };
 
+```
+
+## Set config of meeting 
+
+```
+const MEET_CONFIG = {
+  apiKey: API_KEYS.apiKey, // DO NOT CHANGE
+  meetingNumber: '75098855333',
+  userName: 'Example',
+  userEmail: 'example@example.com',
+  passWord: 'cZ3FJ4',
+  role: 0, // role 1 (host) or 0 (guest)
+};
 ```
   
 ## Development

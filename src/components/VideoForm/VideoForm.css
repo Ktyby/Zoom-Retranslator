@@ -1,0 +1,50 @@
+.header {
+  padding: 20px 0 20px 0;
+
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  background-color: #222;
+
+  z-index: 1030;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+
+  margin: 0 auto;
+}
+
+.header__logo {
+  color: #f0f0f0;
+  font-size: 18px;
+}
+
+.header__form {
+  display: flex;
+  justify-content: space-between;
+
+  width: 700px;
+}
+
+.header__form-input {
+  width:150px;
+
+  border-radius: 5px;
+}
+
+.header__form-button {
+  padding: 5px 15px;
+
+  border: 0;
+	border-radius: 4px; 
+  
+  background: #267af8;
+
+  font-weight: bold;
+  color: #fff;
+}

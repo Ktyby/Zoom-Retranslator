@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from "mobx-react";
+import { Provider } from "mobx-react";
 
 import './index.css';
-import App from './components/App';
-import meetStore from './store/store';
+import AppContainer from './components/App';
+
+import meetStore from './stores/meetStore';
+import callStore from './stores/callStore';
 
 const stores = {
-  meetStore
+  meetStore,
+  callStore
 }
 
 ReactDOM.render(
-  <Provider { ...stores }>
-    <App />
+  <Provider {...stores}>
+    <AppContainer />
   </Provider>,
   document.getElementById('root')
 );

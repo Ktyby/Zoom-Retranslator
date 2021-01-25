@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { observer } from 'mobx-react';
 
 import { API_KEYS } from '../../constants';
 import './VideoForm.css';
 
-import meetStore from '../../store/store';
+import meetStore from '../../stores/meetStore';
+import callStore from '../../stores/callStore';
 
-const VideoForm = observer(() => {
+const VideoForm = () => {
 	const [meetingNumber, setNumberMeeting] = useState('');
 	const [userName, setUserName] = useState('');
 	const [password, setPassword] = useState('');
@@ -24,6 +24,7 @@ const VideoForm = observer(() => {
 		};
 
 		if (meetingNumber && userName && password) {
+			callStore.turnOnCall(true);
 			meetStore.meetConfig(meetConfig);
 		}
 	}
@@ -65,6 +66,6 @@ const VideoForm = observer(() => {
 			</div>
 		</header>
 	);
-});
+};
 
 export default VideoForm;

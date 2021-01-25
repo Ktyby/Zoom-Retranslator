@@ -26,8 +26,8 @@
   "dependencies": {
     "@zoomus/websdk": "1.7.10",
     "mobx": "^6.0.4",
+    "mobx-devtools": "^0.9.27",
     "mobx-react": "^7.0.5",
-    "mobx-react-devtools": "^6.1.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router-dom": "^5.2.0"

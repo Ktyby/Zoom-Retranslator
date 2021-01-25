@@ -1,15 +1,19 @@
 import React from 'react';
 
-import Video from '../Video/Video';
-import VideoForm from '../VideoForm/VideoForm';
+import Video from '../Video';
+import VideoFormContainer from '../VideoForm';
 
-const App = () => {
-  return (
+const App = (props) => {
+  return props.call ? (   
     <main>
-      <VideoForm />
+      <VideoFormContainer />
       <Video />
     </main>
+  ) : (
+    <main>
+      <VideoFormContainer />
+    </main>
   );
-}
+};
 
 export default App;
